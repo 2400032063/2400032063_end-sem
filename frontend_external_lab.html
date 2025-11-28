@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body { margin:0; font-family:Arial; }
+.container { display:flex; }
+
+/* Sidebar */
+.sidebar {
+  width:200px; background:#333; color:white; padding:15px;
+}
+.sidebar ul { padding:0; }
+.sidebar li {
+  list-style:none; padding:10px; border-bottom:1px solid #444;
+}
+
+/* Main */
+.main { flex:1; padding:15px; background:#f3f3f3; }
+
+.topbar {
+  background:white; padding:10px; margin-bottom:15px;
+  border-radius:5px;
+}
+
+/* Cards */
+.cards {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(150px,1fr));
+  gap:10px;
+}
+.card {
+  background:white; padding:15px; border-radius:5px;
+}
+
+/* Responsive */
+@media(max-width:700px){
+  .sidebar{ display:none; }
+  .container{ flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="sidebar">
+    <h3>Dashboard</h3>
+    <ul>
+      <li>Home</li>
+      <li>Courses</li>
+      <li>Marks</li>
+      <li>Notifications</li>
+    </ul>
+  </div>
+
+  <div class="main">
+    <div class="topbar"><h3>Welcome Student</h3></div>
+
+    <div class="cards">
+      <div class="card">Subjects: 6</div>
+      <div class="card">Marks: 82%</div>
+      <div class="card">Alerts: 3</div>
+      <div class="card">Last Login: 2 hrs</div>
+    </div>
+
+    <h3 style="margin-top:20px;">Recent Activity</h3>
+    <ul>
+      <li>Submitted Assignment</li>
+      <li>Checked Marks</li>
+      <li>New Notification</li>
+    </ul>
+  </div>
+
+</div>
+
+</body>
+</html>
